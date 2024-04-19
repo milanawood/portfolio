@@ -111,23 +111,23 @@ body.has-thumb .thumb-over {
 }
 
 body.has-thumb.bog .thumb-over {
-    background-image: url("assets/bog.png");
+    background-image: url("bog.png");
 }
 
 body.has-thumb.gpe .thumb-over {
-    background-image: url("assets/gpe.png");
+    background-image: url("gpe.png");
 }
 
 body.has-thumb.onewhale .thumb-over {
-    background-image: url("assets/onewhale.png");
+    background-image: url("onewhale.png");
 }
 
 body.has-thumb.dtc .thumb-over {
-    background-image: url("assets/dtc.png");
+    background-image: url("dtc.png");
 }
 
 body.has-thumb.readingrainbow .thumb-over {
-    background-image: url("assets/readingrainbow.png");
+    background-image: url("readingrainbow.png");
 }
 
 @media ( min-width: 641px ) {
