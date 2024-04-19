@@ -1,0 +1,143 @@
+:root {
+    font-family: "edita", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --docy: 0;
+    --heady: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+dl {
+    list-style: none;
+    margin: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(0, 26, 255, 1);
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wrapper > * {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: clamp( 1rem, 3vw, 2.5rem );
+    line-height: 1.2;
+    padding: 1rem;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header h1 #bio {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.thumb-over {
+    display: none;
+    position: absolute;
+    width: 488px;
+    height: 326px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+body.has-thumb .thumb-over {
+    display: block;
+}
+
+body.has-thumb.vol-1 .thumb-over {
+    background-image: url("stl1-thumb.png");
+}
+
+body.has-thumb.vol-2 .thumb-over {
+    background-image: url("stl2-thumb.png");
+}
+
+body.has-thumb.vol-3 .thumb-over {
+    background-image: url("stl3-thumb.png");
+}
+
+@media ( min-width: 641px ) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+@media ( max-width: 640px ) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 2rem 0;
+    }
+}
+
+@media ( hover: hover ) {
+    .volume-link a {
+        cursor: none;
+    }
+}
