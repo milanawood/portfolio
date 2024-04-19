@@ -110,16 +110,24 @@ body.has-thumb .thumb-over {
     display: block;
 }
 
-body.has-thumb.vol-1 .thumb-over {
-    background-image: url("stl1-thumb.png");
+body.has-thumb.bog .thumb-over {
+    background-image: url("assets/bog.png");
 }
 
-body.has-thumb.vol-2 .thumb-over {
-    background-image: url("stl2-thumb.png");
+body.has-thumb.gpe .thumb-over {
+    background-image: url("assets/gpe.png");
 }
 
-body.has-thumb.vol-3 .thumb-over {
-    background-image: url("stl3-thumb.png");
+body.has-thumb.onewhale .thumb-over {
+    background-image: url("assets/onewhale.png");
+}
+
+body.has-thumb.dtc .thumb-over {
+    background-image: url("assets/dtc.png");
+}
+
+body.has-thumb.readingrainbow .thumb-over {
+    background-image: url("assets/readingrainbow.png");
 }
 
 @media ( min-width: 641px ) {
@@ -137,7 +145,7 @@ body.has-thumb.vol-3 .thumb-over {
 }
 
 @media ( hover: hover ) {
-    .volume-link a {
+    .project-link a {
         cursor: none;
     }
 }
