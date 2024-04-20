@@ -10,14 +10,14 @@ filenames.forEach( filename => { // preload images
 
 window.addEventListener( "mousemove", e => {
     if ( !overEl ) return;
-    thumbEl.style.top = e.clientY + "px";
-    thumbEl.style.left = e.clientX + "px";
+    thumbEl.style.top = `${e.clientY}px`;
+    thumbEl.style.left = `${e.clientX}px`;
 } );
 
 document.querySelectorAll( ".project-link a" ).forEach( el => {
     el.addEventListener( "mouseenter", e => {
         overEl = e.currentTarget;
-        document.body.className = "has-thumb " + e.currentTarget.className;
+        document.body.className = "has-thumb" + e.currentTarget.className;
     } );
     el.addEventListener( "mouseleave", e => {
         if ( overEl === e.currentTarget ) overEl = null;
