@@ -1,6 +1,6 @@
 let overEl = null;
 
-const thumbEl = document.querySelector( ".thumb-over " );
+const thumbEl = document.querySelector( ".thumb-over" );
 
 const filenames = [ "bog.png", "gpe.png", "onewhale.png", "readingrainbow.png", "dtc.png" ];
 filenames.forEach( filename => { // preload images
