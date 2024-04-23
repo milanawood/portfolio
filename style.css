@@ -94,6 +94,37 @@ strong {
     font-weight: 400;
 }
 
+.header .contactlinks {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.header .contactlinks #whatsapp {
+    background-image: url(https://i.ibb.co/xKZkYDB/whatsapp-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5%;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+.header .contactlinks #email {
+    background-image: url(https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjEyMzItZWxlbWVudC0wMi1wXzEucG5n.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+.header .contactlinks #github {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5%;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
 .thumb-over {
     display: none;
     position: absolute;
