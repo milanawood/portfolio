@@ -110,7 +110,7 @@ body.has-thumb .thumb-over {
     display: block;
 }
 
-body.has-thumb .bog .thumb-over {
+body.has-thumb.bog .thumb-over {
     background-image: url("bog.png");
 }
 
