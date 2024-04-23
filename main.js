@@ -17,7 +17,7 @@ window.addEventListener( "mousemove", e => {
 document.querySelectorAll( ".project-link a" ).forEach( el => {
     el.addEventListener( "mouseenter", e => {
         overEl = e.currentTarget;
-        document.body.className = "has-thumb" + e.currentTarget.className;
+        document.body.className = "has-thumb " + e.currentTarget.className;
     } );
     el.addEventListener( "mouseleave", e => {
         if ( overEl === e.currentTarget ) overEl = null;
