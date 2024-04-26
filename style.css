@@ -84,6 +84,13 @@ strong {
     padding: 1rem;
 }
 
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 #header h1 {
     text-transform: uppercase;
     font-weight: 700;
@@ -94,40 +101,20 @@ strong {
     font-weight: 400;
 }
 
-#header .contactlinks {
-    display: inline-flex;
+.contactlinks {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Adjust margin as needed */
 }
 
-#header .contactlinks #whatsapp {
-    background-image: url(https://i.ibb.co/xKZkYDB/whatsapp-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 5%;
-    min-width: 2rem;
-    min-height: 2rem;
+.contactlinks a {
+    margin: 0 10px; /* Adjust spacing between buttons as needed */
 }
 
-#header .contactlinks #email {
-    background-image: url(https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjEyMzItZWxlbWVudC0wMi1wXzEucG5n.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-width: 2rem;
-    min-height: 2rem;
+.contactlinks a:last-child {
+    margin-right: 0; /* Remove margin from the last button */
 }
-
-#header .contactlinks #github {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 5%;
-    min-width: 2rem;
-    min-height: 2rem;
-}
-
-
-
-
 
 .thumb-over {
     display: none;
@@ -177,11 +164,16 @@ body.has-thumb.readingrainbow .thumb-over {
   /* Media query for small screens */
   @media screen and (max-width: 600px) {
     .scattered .letter {
-      /* Add additional styles for scattered letters on small screens if needed */
-      transform: translateX(calc(-50% + 20px)) translateY(calc(-50% + 20px));
-      /* Example transformation: move letters diagonally */
+        /* Add additional styles for scattered letters on small screens if needed */
+        transform: translateX(calc(-50% + 20px)) translateY(calc(-50% + 20px));
+        /* Example transformation: move letters diagonally */
     }
-  }
+
+    /* Add styles for handling touch events */
+    .project-link a {
+        touch-action: manipulation; /* Prevent default touch behaviors */
+    }
+}
 
 @media screen and ( min-width: 641px ) {
     html, body {

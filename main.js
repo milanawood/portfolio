@@ -14,6 +14,21 @@ window.addEventListener( "mousemove", e => {
     thumbEl.style.left = e.clientX + "px";
 } );
 
+// Touch Event Listeners for Scattering Letters
+document.querySelectorAll(".project-link a").forEach(el => {
+    el.addEventListener("touchstart", e => {
+        scatterLetters();
+    });
+});
+
+// Function to scatter letters
+function scatterLetters() {
+    if (window.innerWidth <= 600) { // Adjust the width as needed
+        header.classList.add('scattered');
+        projectLink.classList.add('scattered');
+    }
+}
+
 document.querySelectorAll( ".project-link a" ).forEach( el => {
     el.addEventListener( "mouseenter", e => {
         overEl = e.currentTarget;
