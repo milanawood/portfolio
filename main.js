@@ -24,13 +24,17 @@ document.querySelectorAll(".project-link a").forEach(el => {
 
 // Function to scatter letters
 function scatterLetters() {
+    const header = document.getElementById('header'); // Define header here
+    const projectLinks = document.querySelectorAll('.project-link'); // Define project links here
+
     if (window.innerWidth <= 600) { // Adjust the width as needed
         header.classList.add('scattered');
-        document.querySelectorAll('.project-link').forEach(link => {
+        projectLinks.forEach(link => {
             link.classList.add('scattered');
         });
     }
 }
+
 
 document.querySelectorAll(".project-link a").forEach(el => {
     el.addEventListener("mouseenter", e => {
@@ -55,11 +59,14 @@ function scatterLetters() {
     }
   }
   
- // Function to return letters to normal position only on small screens
+// Function to return letters to normal position only on small screens
 function returnLettersToNormal() {
+    const header = document.getElementById('header'); // Define header here
+    const projectLinks = document.querySelectorAll('.project-link'); // Define project links here
+
     if (window.innerWidth <= 600) { // Adjust the width as needed
         header.classList.remove('scattered');
-        document.querySelectorAll('.project-link').forEach(link => {
+        projectLinks.forEach(link => {
             link.classList.remove('scattered');
         });
     }
