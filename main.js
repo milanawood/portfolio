@@ -32,6 +32,7 @@ const letters = moveableText.querySelectorAll('.letter');
 
 // Function to handle touch move
 function handleTouchMove(event) {
+    if (window.innerWidth <= 641 ) {
   // Prevent default touch behavior (e.g., scrolling)
   event.preventDefault();
   
@@ -74,6 +75,7 @@ function handleTouchEnd() {
         letter.style.left = 'auto';
         letter.style.top = 'auto';
       });
+    }
 }
 
 // Add touchend event listener to the document

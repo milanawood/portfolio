@@ -174,13 +174,13 @@ body.has-thumb.readingrainbow .thumb-over {
     background-image: url("readingrainbow.png");
 }
 
-@media ( min-width: 641px ) {
+@media screen and ( min-width: 641px ) {
     html, body {
         overflow: hidden;
     }
 }
 
-@media ( max-width: 640px ) {
+@media screen and ( max-width: 640px ) {
     .wrapper {
         grid-template-columns: 1fr;
         min-height: 0;
@@ -188,7 +188,7 @@ body.has-thumb.readingrainbow .thumb-over {
     }
 }
 
-@media ( hover: hover ) {
+@media screen and ( hover: hover ) {
     .project-link a {
         cursor: none;
     }
