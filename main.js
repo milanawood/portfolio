@@ -25,11 +25,10 @@ document.querySelectorAll( ".project-link a" ).forEach( el => {
     } );
 } );
 
-// Get the text element
 const movableText = document.getElementById('movableText');
 
-// Add touch event listeners to the document
-document.addEventListener('touchmove', (event) => {
+// Function to handle touch move
+function handleTouchMove(event) {
   // Prevent default touch behavior (e.g., scrolling)
   event.preventDefault();
   
@@ -44,4 +43,17 @@ document.addEventListener('touchmove', (event) => {
   // Set the text position
   movableText.style.left = newX + 'px';
   movableText.style.top = newY + 'px';
-});
+}
+
+// Add touch event listeners to the document
+document.addEventListener('touchmove', handleTouchMove);
+
+// Function to handle touch end
+function handleTouchEnd() {
+  // Reset the text position to its original state
+  movableText.style.left = '50%';
+  movableText.style.top = '50%';
+}
+
+// Add touchend event listener to the document
+document.addEventListener('touchend', handleTouchEnd);

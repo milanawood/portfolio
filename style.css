@@ -130,9 +130,13 @@ strong {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
     user-select: none; /* Disable text selection */
   }
+
+.letter {
+    user-select: none; /* Disable text selection */
+    position: relative; /* Required for absolute positioning of each letter */
+  }  
 
 .thumb-over {
     display: none;
