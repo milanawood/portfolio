@@ -125,18 +125,9 @@ strong {
     min-height: 2rem;
 }
 
-#movableText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    user-select: none; /* Disable text selection */
-  }
 
-.letter {
-    user-select: none; /* Disable text selection */
-    position: relative; /* Required for absolute positioning of each letter */
-  }  
+
+
 
 .thumb-over {
     display: none;
@@ -186,6 +177,17 @@ body.has-thumb.readingrainbow .thumb-over {
         min-height: 0;
         padding: 2rem 0;
     }
+    #movableText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none; /* Disable text selection */
+      }
+      .letter {
+        user-select: none; /* Disable text selection */
+        position: relative; /* Required for absolute positioning of each letter */
+      }  
 }
 
 @media screen and ( hover: hover ) {
