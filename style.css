@@ -84,22 +84,22 @@ strong {
     padding: 1rem;
 }
 
-.header h1 {
+#header h1 {
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.header h1 #bio {
+#header h1 #bio {
     font-style: italic;
     font-weight: 400;
 }
 
-.header .contactlinks {
+#header .contactlinks {
     display: inline-flex;
     justify-content: center;
 }
 
-.header .contactlinks #whatsapp {
+#header .contactlinks #whatsapp {
     background-image: url(https://i.ibb.co/xKZkYDB/whatsapp-icon.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@ strong {
     min-height: 2rem;
 }
 
-.header .contactlinks #email {
+#header .contactlinks #email {
     background-image: url(https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjEyMzItZWxlbWVudC0wMi1wXzEucG5n.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ strong {
     min-height: 2rem;
 }
 
-.header .contactlinks #github {
+#header .contactlinks #github {
     background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -165,6 +165,24 @@ body.has-thumb.readingrainbow .thumb-over {
     background-image: url("readingrainbow.png");
 }
 
+.scattered {
+    display: flex;
+  }
+  
+  .letter {
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Media query for small screens */
+  @media screen and (max-width: 600px) {
+    .scattered .letter {
+      /* Add additional styles for scattered letters on small screens if needed */
+      transform: translateX(calc(-50% + 20px)) translateY(calc(-50% + 20px));
+      /* Example transformation: move letters diagonally */
+    }
+  }
+
 @media screen and ( min-width: 641px ) {
     html, body {
         overflow: hidden;
@@ -177,17 +195,7 @@ body.has-thumb.readingrainbow .thumb-over {
         min-height: 0;
         padding: 2rem 0;
     }
-    #movableText {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        user-select: none; /* Disable text selection */
-      }
-      .letter {
-        user-select: none; /* Disable text selection */
-        position: relative; /* Required for absolute positioning of each letter */
-      }  
+
 }
 
 @media screen and ( hover: hover ) {
