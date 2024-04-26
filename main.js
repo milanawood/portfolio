@@ -25,3 +25,23 @@ document.querySelectorAll( ".project-link a" ).forEach( el => {
     } );
 } );
 
+// Get the text element
+const movableText = document.getElementById('movableText');
+
+// Add touch event listeners to the document
+document.addEventListener('touchmove', (event) => {
+  // Prevent default touch behavior (e.g., scrolling)
+  event.preventDefault();
+  
+  // Get the touch position relative to the viewport
+  const touchX = event.touches[0].clientX;
+  const touchY = event.touches[0].clientY;
+  
+  // Calculate the new position of the text
+  const newX = touchX - movableText.offsetWidth / 2;
+  const newY = touchY - movableText.offsetHeight / 2;
+  
+  // Set the text position
+  movableText.style.left = newX + 'px';
+  movableText.style.top = newY + 'px';
+});
